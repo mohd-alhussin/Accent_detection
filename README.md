@@ -6,7 +6,10 @@
     <a href="https://github.com/mohd-alhussin/Accent_detection/">
 </p>
 
+# Accent recognition from raw speech 
 
+Method we use whisper to segment the audio file into speech region 
+then we use off the shelf method to detect accent
 **Accents avialable**: 
 
 <accent> <id>
@@ -40,7 +43,7 @@ Step 1: Using python 3.9: install python and the requirements
 python -m pip install -r requirements.txt
 ```
 
-You need to run this to get Pytorch running with CUDA 11.6
+
 
 
 # Run 
