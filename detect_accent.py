@@ -40,7 +40,6 @@ st.write('Classifire MODEL loaded successfully')
 print('Classifire MODEL loaded successfully')
 output_wav_file = "output_audio.wav"
 try:
-    st.write('Extracting the audio from your link ...')
     extract_audio_from_video_link(url, output_wav_file)
     print('Audio loaded successfully')
     st.write('Audio loaded successfully')
