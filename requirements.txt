@@ -1,5 +1,6 @@
 pydub
 yt-dlp
+ffmpeg
 openai-whisper
 speechbrain
 soundfile
