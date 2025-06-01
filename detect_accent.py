@@ -28,7 +28,7 @@ st.title("Spoken Accent Detection")
 st.write("Please Enter the URL of the video you want to analyse")
 url = st.text_input('The URL link')
 
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 print('Whispper MODEL loaded successfully')
 classifier = EncoderClassifier.from_hparams(source="Jzuluaga/accent-id-commonaccent_ecapa", savedir="pretrained_models/accent-id-commonaccent_ecapa",local_strategy=LocalStrategy.COPY_SKIP_CACHE)
 print('Classifier MODEL loaded successfully')
