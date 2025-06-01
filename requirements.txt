@@ -1,0 +1,5 @@
+pydub
+yt-dlp
+openai-whisper
+speechbrain
+soundfile
