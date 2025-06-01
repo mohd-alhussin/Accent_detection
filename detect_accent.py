@@ -28,13 +28,19 @@ st.title("Spoken Accent Detection")
 st.write("Please Enter the URL of the video you want to analyse")
 url = st.text_input('The URL link')
 
+model = whisper.load_model("tiny")
+print('Whispper MODEL loaded successfully')
+classifier = EncoderClassifier.from_hparams(source="Jzuluaga/accent-id-commonaccent_ecapa", savedir="pretrained_models/accent-id-commonaccent_ecapa",local_strategy=LocalStrategy.COPY_SKIP_CACHE)
+print('Whispper MODEL loaded successfully')
 output_wav_file = "output_audio.wav"
 try:
     extract_audio_from_video_link(url, output_wav_file)
+    print('Audio downloaded successfully')
 
     audio_file = AudioSegment.from_file("./temp_video.mp3")
+    
 
-    model = whisper.load_model("base")
+    
     audio = whisper.load_audio("temp_video.mp3")
     audio = whisper.pad_or_trim(audio)
     mel = whisper.log_mel_spectrogram(audio).to(model.device)
@@ -42,7 +48,7 @@ try:
     st.write(f"Detected language: {max(probs, key=probs.get)}")
 
 
-    classifier = EncoderClassifier.from_hparams(source="Jzuluaga/accent-id-commonaccent_ecapa", savedir="pretrained_models/accent-id-commonaccent_ecapa",local_strategy=LocalStrategy.COPY_SKIP_CACHE)
+    
     out_prob, score, index, text_lab = classifier.classify_file("output_audio.wav")
     print(text_lab)
     print(score)
