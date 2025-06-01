@@ -11,32 +11,7 @@
 
 <accent> <id>
 -----------------------------
-* Austrian - 104
-* East African Khoja - 107
-* Dutch - 108
-* West Indies and Bermuda (Bahamas, Bermuda, Jamaica, Trinidad) - 282
-* Welsh English - 623
-* Malaysian English - 1004
-* Liverpool English,Lancashire English,England English - 2571
-* Singaporean English - 2792
-* Hong Kong English - 2951
-* Filipino - 4030
-* Southern African (South Africa, Zimbabwe, Namibia) - 4270
-* New Zealand English - 4960
-* Irish English - 6339
-* Northern Irish - 6862
-* Scottish English - 10817
-* Australian English - 33335
-* German English,Non native speaker - 41258
-* Canadian English - 45640
-* England English - 75772
-* India and South Asia (India, Pakistan, Sri Lanka) - 79043
-* United States English - 249284
-```
 
-We also have developed AccentID system for the following languages:
-
-```python
 <accent-id> <duration-in-hrs>
 -----------------------------
 'england' => 0
@@ -56,6 +31,7 @@ We also have developed AccentID system for the following languages:
 'wales' => 14
 'singapore' => 15
 
+```python
 # Get started: 
 
 Step 1: Using python 3.9: install python and the requirements
@@ -66,7 +42,7 @@ python -m pip install -r requirements.txt
 
 You need to run this to get Pytorch running with CUDA 11.6
 
-Our system is trained on the CommonVoice dataset (11.0 version). Follow the data preparation (`CommonAccent/common_accent_prepare.py`) in `CommonAccent/README.md`
+
 # Run 
 python detect_accent.py
 
