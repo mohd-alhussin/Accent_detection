@@ -50,6 +50,8 @@ try:
 
     
     out_prob, score, index, text_lab = classifier.classify_file("output_audio.wav")
+    os.remove("output_audio.wav")
+    os.remove("temp_video.mp3")
     print(text_lab)
     print(score)
     st.write(f"Detected Accent is: {text_lab} with confidence of {score[0]*100:.2f}%")
