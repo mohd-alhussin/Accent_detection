@@ -31,7 +31,7 @@ url = st.text_input('The URL link')
 model = whisper.load_model("base")
 print('Whispper MODEL loaded successfully')
 classifier = EncoderClassifier.from_hparams(source="Jzuluaga/accent-id-commonaccent_ecapa", savedir="pretrained_models/accent-id-commonaccent_ecapa",local_strategy=LocalStrategy.COPY_SKIP_CACHE)
-print('Whispper MODEL loaded successfully')
+print('Classifier MODEL loaded successfully')
 output_wav_file = "output_audio.wav"
 try:
     extract_audio_from_video_link(url, output_wav_file)
