@@ -8,8 +8,10 @@
 
 # Accent recognition from raw speech 
 
-Method we use whisper to segment the audio file into speech region 
-then we use off the shelf method to detect accent
+We use whisper to segment the audio file into speech region 
+then we use off the shelf method to detect accent.
+
+
 **Accents avialable**: 
 
 <accent> <id>
