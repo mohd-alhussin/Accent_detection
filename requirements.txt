@@ -5,3 +5,4 @@ openai-whisper
 speechbrain
 soundfile
 numpy==1.26.4
+streamlit
